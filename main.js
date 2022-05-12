@@ -9,27 +9,21 @@
   📌 이미지 하단의 점을 누를 경우, 해당 순번의 이미지를 보여주세요.
 
 */
-
-console.log("hello, vanilla.");
-
 const right = document.querySelector("i.fa-arrow-right");
 const left = document.querySelector("i.fa-arrow-left");
 const imgbx = document.querySelector(".image-box")
-const img = document.querySelectorAll("img");
 var num = 0;
 
+console.log("hello, vanilla.");
+
 right.addEventListener("click", function(){
-  imgbx.appendChild(img[num]);
-  num = num + 1;
-  if (num === 5){
-    num = num - 5;
-  }
+  var img = document.querySelectorAll("img");
+  imgbx.appendChild(img[0]);
 }) 
 
 left.addEventListener("click", function(){
-  imgbx.appendChild(img[num]);
-  if (num === 0){
-    num = num + 5;
-  }
-  num = num - 1;
+  var img = document.querySelectorAll("img");
+  imgbx.prepend(img[4]);
 }) 
+
+
